@@ -12,9 +12,11 @@ namespace CSharpStudy
         // Enum
         enum Cor { Azul, Verde, Vermelho }
 
+        enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar}
+
         static void Main(string[] args)
         {
-
+            /*
             Cor corFavorita = Cor.Verde;
             Cor corFavoritaDoPhilipe = Cor.Azul;
             Console.WriteLine(corFavorita);
@@ -22,7 +24,32 @@ namespace CSharpStudy
             Console.WriteLine((int)corFavoritaDoPhilipe);
             // Conversão de número em Enum
             Console.WriteLine((Cor)2);
+            
 
+            Console.WriteLine("Selecione uma das opções abaixo: ");
+            Console.WriteLine("1-Criar\n2-Deletar\n3-Editar\n4-Listar\n5-Atualizar");
+            int index = int.Parse(Console.ReadLine());
+            Opcao opcaoSelecionada = (Opcao)index;
+
+            Console.WriteLine(opcaoSelecionada);
+
+            switch (opcaoSelecionada)
+            {
+                case Opcao.Criar:
+                    Console.WriteLine("Você quer criar algo...");
+                    break;
+                case Opcao.Deletar:
+                    Console.WriteLine("Você quer deletar algo...");
+                    break;
+                case Opcao.Atualizar:
+                    Console.WriteLine("Você quer atualizar algo...");
+                    break;
+                default:
+                    Console.WriteLine("Opção não encontrada...");
+                    break;
+            }
+
+            /*
             string nome;
             int idade;
 
@@ -100,6 +127,20 @@ namespace CSharpStudy
                     Console.WriteLine("Não sei a sua cor favorita");
                     break;
             }
+
+            
+
+            // while: Enquanto for verdade faça
+
+            int contador = 0;
+            while(contador < 10)
+            {
+                Console.WriteLine(contador);
+                contador++;
+            }
+
+            */
+
 
 
             Console.ReadLine();
