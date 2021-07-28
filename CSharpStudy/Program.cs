@@ -139,9 +139,48 @@ namespace CSharpStudy
                 contador++;
             }
 
+            
+
+            // do while: Funciona como o while simples, porém a execução do código irá ocorrer pelo menos uma vez
+
+            do
+            {
+                Console.WriteLine("do while");
+            } while (100 < 0);
+
+            int contadorDoWhile = 0;
+            do
+            {
+                Console.WriteLine("do while: " + contadorDoWhile);
+                contadorDoWhile+=2;
+            } while (contadorDoWhile < 10);
+
+            
+
+            // foreach: para cada item, repita o bloco de código
+            
             */
 
+            string[] palavras = { "Vitor", "Lima", "Guia do Programador", "Formação", "Node" };
 
+            foreach(string palavra in palavras)
+            {
+                Console.WriteLine("Laço foreach: " + palavra);
+            }
+
+            
+
+            // for
+
+            for (int contadorFor = 0; contadorFor < palavras.Length; contadorFor++)
+            {
+                Console.WriteLine("Laço for: " + palavras[contadorFor]);
+            }
+
+            for (int contadorFor2 = palavras.Length-1; contadorFor2 >= 0; contadorFor2--)
+            {
+                Console.WriteLine("Laço for decrescente: " + palavras[contadorFor2]);
+            }
 
             Console.ReadLine();
              
